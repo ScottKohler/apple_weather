@@ -1,0 +1,30 @@
+<h1>Listing Weathers</h1>
+
+<table>
+  <thead>
+    <tr>
+    <th>ID</th>
+    <th>Current Temp</th>
+    <th>Zip</th>
+    <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @weathers.each do  |weather| %>
+        <tr>
+            <td><%= weather.id %></td>
+            <td><%= weather.current_temperature %></td>
+            <td><%= weather.zipcode %></td>
+        </tr>
+    <% end %>
+    
+    <!-- for each weather, if expire_date not nil and expire_date GT now, remove weather instance
+    #from a render standposint this should furnish an initial display of weather detail, followed by a purge of expired ones -->
+
+
+    
+
+  </tbody>
+</table>
+
