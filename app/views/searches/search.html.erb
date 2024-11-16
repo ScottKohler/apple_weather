@@ -1,0 +1,9 @@
+<h1>Searches#search</h1>
+<p>Find me in app/views/searches/search.html.erb</p>
+
+<%= form_tag searches_path, method: :post do %>
+    <h2>Please enter zipcode: </h2>
+    <%= text_field_tag(:zip)%>
+    <%= submit_tag("Search")%>
+<% end %>
+
