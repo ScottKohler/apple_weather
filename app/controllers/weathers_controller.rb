@@ -1,3 +1,5 @@
+#require 'httparty'
+
 class WeathersController < ApplicationController
 
   before_action :set_weather, only: [  :show, :edit, :update, :destroy ]  #:create, 
@@ -38,6 +40,11 @@ class WeathersController < ApplicationController
     #      #w.delete  -- ?
     # #else
     # end   
+
+    #response=HTTParty.get('https://api.openweathermap.org/data/2.5/weather')
+    # response = HTTParty.get('http://api.stackexchange.com/2.2/questions?site=stackoverflow')
+    # p response.body
+
 
   end
 
